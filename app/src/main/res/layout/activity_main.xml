@@ -11,29 +11,49 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
 
 
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="15dp"
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="top"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:padding="5dp"-->
-<!--        android:orientation="horizontal">-->
-<!--        <EditText-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:textSize="14sp"-->
-<!--            android:hint="Search City"-->
-<!--            />-->
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="end"-->
-<!--            android:src=""-->
+        android:background="@drawable/background"
 
-<!--    </LinearLayout>-->
+        android:paddingStart="25dp"
+        android:paddingEnd="23dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <EditText
+
+            android:id="@+id/cityEdt"
+            android:layout_width="300dp"
+
+            android:textColorHint="@color/black"
+            android:textStyle="normal"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:hint="Search City"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/search"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:padding="5dp"
+            android:src="@drawable/ic_search"
+            />
+
+    </LinearLayout>
 
 
     <LinearLayout
@@ -88,155 +108,155 @@
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                >
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:cardBackgroundColor="@color/background"
+                app:cardBackgroundColor="@color/background"
 
-                    app:cardCornerRadius="15dp">
-                    <TextView
-                        android:id="@+id/weather"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="weather"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/holo_red_dark"
-                        android:padding="20dp"/>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="15dp">
+                <TextView
+                    android:id="@+id/weather"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardBackgroundColor="@color/background"
+                    android:text="weather"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:padding="20dp"/>
+            </com.google.android.material.card.MaterialCardView>
 
-                    app:cardCornerRadius="15dp"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/background"
+
+                app:cardCornerRadius="15dp"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
                     android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="temp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20sp"
+                        android:padding="7dp"
+                        android:textStyle="bold"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="10dp">
+                        android:orientation="horizontal">
                         <TextView
-                            android:id="@+id/temp"
+                            android:id="@+id/min_temp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="temp"
-                            android:textColor="@android:color/holo_red_dark"
-                            android:textSize="20sp"
-                            android:padding="7dp"
-                            android:textStyle="bold"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:id="@+id/min_temp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="min: temp"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"/>
-                            <TextView
-                                android:id="@+id/max_temp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="max: temp"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:textSize="16sp"
-                                android:textColor="@color/black"/>
-                        </LinearLayout>
+                            android:text="min: temp"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:id="@+id/max_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="max: temp"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:orientation="horizontal">
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:cardBackgroundColor="@color/background"
+                app:cardBackgroundColor="@color/background"
 
-                    app:cardCornerRadius="15dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:background="@android:color/transparent"
-                        android:padding="8dp">
-                        <TextView
-                            android:id="@+id/pressure"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="1000"
-                            android:paddingRight="100dp"
-                            android:background="@android:color/transparent"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/holo_red_dark"
-                            android:textSize="20sp"/>
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Pressure"
-                            android:background="@android:color/transparent"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="15dp">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/background"
-
-                    app:cardCornerRadius="15dp"
-                    android:layout_marginLeft="10dp">
-                    <LinearLayout
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp">
+                    <TextView
+                        android:id="@+id/pressure"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-                        <TextView
-                            android:id="@+id/humidity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="24"
-                            android:textSize="20sp"
-                            android:textColor="@android:color/holo_red_dark"
-                            android:textStyle="bold"
+                        android:text="1000"
+                        android:paddingRight="100dp"
+                        android:background="@android:color/transparent"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20sp"/>
+                    <TextView
 
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Humidity"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pressure"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                            />
-                    </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/background"
 
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
+                app:cardCornerRadius="15dp"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+
+                        />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -294,5 +314,10 @@
         </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
+
+
+</LinearLayout>
+
+
 
 </ScrollView>

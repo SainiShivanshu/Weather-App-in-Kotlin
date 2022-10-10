@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#005a96</color>
+    <color name="search_bar">#528bbe</color>
 </resources>
